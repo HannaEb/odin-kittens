@@ -1,0 +1,23 @@
+<h2>All Kittens</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Cuteness</th>
+      <th>Softness</th>
+    </tr>
+  </thead>
+  <body>
+    <% @kittens.each do |k| %>
+      <tr>
+        <td><%= link_to k.name, k %></td>
+        <td><%= k.age %></td>
+        <td><%= k.cuteness %></td>
+        <td><%= k.softness %></td>
+        <td><%= link_to 'Delete', kitten_path(k), method: :delete %>
+      </tr>
+    <% end %>
+  </body>
+</table>

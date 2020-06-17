@@ -10,7 +10,7 @@ class KittensController < ApplicationController
 
   def create
     @kitten = Kitten.new(kitten_params)
-    @article.save
+    @kitten.save
     redirect_to root_path
   end
 
@@ -24,7 +24,7 @@ class KittensController < ApplicationController
 
   def update
     @kitten = Kitten.find(params[:id])
-    @kitten.update(article_params)
+    @kitten.update(kitten_params)
     redirect_to root_path
   end
 

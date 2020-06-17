@@ -1,0 +1,22 @@
+<h2><%= @kitten.name %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Cuteness</th>
+      <th>Softness</th>
+    </tr>
+  </thead>
+  <body>
+    <tr>
+      <td><%= @kitten.name %></td>
+      <td><%= @kitten.age %></td>
+      <td><%= @kitten.cuteness %></td>
+      <td><%= @kitten.softness %></td>
+    </tr>
+  </body>
+</table>
+
+<%= link_to 'Delete', kitten_path(@kitten), method: :delete %>
