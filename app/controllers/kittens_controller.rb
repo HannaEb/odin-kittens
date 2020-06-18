@@ -10,8 +10,13 @@ class KittensController < ApplicationController
 
   def create
     @kitten = Kitten.new(kitten_params)
-    @kitten.save
-    redirect_to root_path
+    if @kitten.save
+      flash.notice = "Kitten was successfully created"
+      redirect_to root_path
+    else
+      flash.now.alert = "Oops, something went wrong!"
+      render :new
+    end
   end
 
   def show
@@ -24,13 +29,19 @@ class KittensController < ApplicationController
 
   def update
     @kitten = Kitten.find(params[:id])
-    @kitten.update(kitten_params)
-    redirect_to root_path
+    if @kitten.update(kitten_params)
+      flash.notice = "Kitten was successfully updated"
+      redirect_to root_path
+    else
+      flash.now.alert = "Oops, something went wrong!"
+      render :edit
+    end
   end
 
   def destroy
     @kitten = Kitten.find(params[:id])
     @kitten.destroy
+    flash.notice = "Kitten was deleted"
     redirect_to root_path
   end
 
