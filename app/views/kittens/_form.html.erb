@@ -10,15 +10,15 @@
   </p>
   <p>
     <%= f.label :age %>
-    <%= f.number_field :age %>
+    <%= f.number_field :age, in: [1, 10] %>
   </p>
   <p>
     <%= f.label :cuteness %>
-    <%= f.number_field :cuteness %>
+    <%= f.number_field :cuteness, in: [1, 10] %>
   </p>
   <p>
     <%= f.label :softness %>
-    <%= f.number_field :softness %>
+    <%= f.number_field :softness, in: [1, 10] %>
   </p>
   <p>
     <%= f.submit "Submit" %>
