@@ -1,26 +1,28 @@
-<%= form_for @kitten do |f| %>
-<ul>
-  <% @kitten.errors.full_messages.each do |e| %>
-    <li><%= e %> </li>
+<div class = "form">
+  <%= form_for @kitten do |f| %>
+  <ul>
+    <% @kitten.errors.full_messages.each do |e| %>
+      <li><%= e %> </li>
+    <% end %>
+  </ul>
+    <p>
+      <%= f.label :name  %>
+      <%= f.text_field :name, class: "form_field"%>
+    </p>
+    <p>
+      <%= f.label :age %>
+      <%= f.number_field :age, in: [1, 10], class: "form_field" %>
+    </p>
+    <p>
+      <%= f.label :cuteness %>
+      <%= f.number_field :cuteness, in: [1, 10], class: "form_field" %>
+    </p>
+    <p>
+      <%= f.label :softness %>
+      <%= f.number_field :softness, in: [1, 10], class: "form_field" %>
+    </p>
+    <p>
+      <%= f.submit "Submit", class: "button" %>
+    </p>
   <% end %>
-</ul>
-  <p>
-    <%= f.label :name  %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :age %>
-    <%= f.number_field :age, in: [1, 10] %>
-  </p>
-  <p>
-    <%= f.label :cuteness %>
-    <%= f.number_field :cuteness, in: [1, 10] %>
-  </p>
-  <p>
-    <%= f.label :softness %>
-    <%= f.number_field :softness, in: [1, 10] %>
-  </p>
-  <p>
-    <%= f.submit "Submit" %>
-  </p>
-<% end %>
+</div>

@@ -10,9 +10,15 @@
   </head>
 
   <body>
-    <% flash.each do |type, msg| %>
-      <%= msg %>
-    <% end %>
+    <ul>
+      <li><%= link_to 'HOME', root_path %></li>
+    </ul>
+
+    <p>
+      <% flash.each do |type, msg| %>
+        <%= msg %>
+      <% end %>
+    </p>
 
     <%= yield %>
   </body>

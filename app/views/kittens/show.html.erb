@@ -1,6 +1,6 @@
 <h2><%= @kitten.name %></h2>
 
-<table>
+<table id="kittens">
   <thead>
     <tr>
       <th>Name</th>
@@ -19,6 +19,8 @@
   </body>
 </table>
 
-<%= link_to 'See all Kittens', root_path %>
-<%= link_to 'Edit', edit_kitten_path %>
-<%= link_to 'Delete', kitten_path(@kitten), method: :delete %>
+
+<p>
+  <%= link_to 'Edit', edit_kitten_path %>
+  <%= link_to 'Delete', kitten_path(@kitten), method: :delete %>
+</p>

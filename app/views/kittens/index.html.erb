@@ -1,12 +1,13 @@
 <h2>All Kittens</h2>
 
-<table>
+<table id="kittens">
   <thead>
     <tr>
       <th>Name</th>
       <th>Age</th>
       <th>Cuteness</th>
       <th>Softness</th>
+      <th></th>
     </tr>
   </thead>
   <body>
@@ -22,4 +23,6 @@
   </body>
 </table>
 
-<%= link_to 'Add Kitten', new_kitten_path %>
+<p>
+  <%= link_to 'Add Kitten', new_kitten_path %>
+</p>

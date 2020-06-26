@@ -1,3 +1,49 @@
 // Place all the styles related to the Kittens controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form {
+  border-radius: 5px;
+  background-color: #ede6f2;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.form_field {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #eadaf5;
+}
+
+.button:hover {
+  background-color: #410370;
+  color: #ede6f2;
+}
+
+#kittens {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#kittens td, #kittens th {
+  // border: 1px solid #2c024d;
+  padding: 8px;
+}
+
+#kittens th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #9c70ba;
+  color: #ede6f2;
+}
