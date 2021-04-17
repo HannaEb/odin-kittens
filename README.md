@@ -6,6 +6,8 @@ Odin Kittens is a project where a simple Rails app is set up to be a data-produc
 
 It is part of The Odin Project's Ruby on Rails Curriculum (http://www.theodinproject.com).
 
+![](public/screenshot.png)
+
 
 ## How to Use
 
